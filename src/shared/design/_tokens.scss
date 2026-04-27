@@ -61,3 +61,11 @@ $layout-article-max:  680px;  // article body line length
 // ---------- Z-index ---------------------------------------------------------
 $z-masthead: 50;
 $z-overlay:  100;
+
+// ---------- Breakpoints -----------------------------------------------------
+// Mobile-first breakpoints. Used as `@media (max-width: $bp-md)` to scope
+// rules to viewports narrower than the named threshold.
+$bp-sm: 480px;   // small phone
+$bp-md: 768px;   // phone → small tablet
+$bp-lg: 1024px;  // tablet → laptop
+$bp-xl: 1280px;  // desktop

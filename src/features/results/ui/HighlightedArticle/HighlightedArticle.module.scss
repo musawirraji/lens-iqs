@@ -2,6 +2,15 @@
   padding: $space-12 $space-12 $space-20;
   border-right: $border-hairline;
   overflow-y: auto;
+
+  @media (max-width: $bp-lg) {
+    padding: $space-10 $space-8 $space-16;
+    border-right: 0;
+  }
+
+  @media (max-width: $bp-md) {
+    padding: $space-6 $space-5 $space-10;
+  }
 }
 
 .kicker {
@@ -15,6 +24,10 @@
   font-size: $size-h1;
   margin-bottom: $space-4;
   max-width: 720px;
+
+  @media (max-width: $bp-md) {
+    font-size: 26px;
+  }
 }
 
 .byline {
@@ -32,6 +45,11 @@
   max-width: $layout-article-max;
   color: $color-ink;
   white-space: pre-wrap;
+
+  @media (max-width: $bp-md) {
+    font-size: 16px;
+    line-height: 1.65;
+  }
 }
 
 .hl-red {
@@ -66,6 +84,12 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: $color-ink-dim;
+
+  @media (max-width: $bp-md) {
+    flex-direction: column;
+    gap: $space-2;
+    margin-top: $space-8;
+  }
 }
 
 .swatch {

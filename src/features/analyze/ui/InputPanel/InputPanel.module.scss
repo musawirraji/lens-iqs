@@ -3,11 +3,21 @@
   grid-template-columns: auto 1fr auto;
   border-bottom: $border-hairline;
   background: $color-navy-2;
+
+  // Mobile: stack the three regions in a single column.
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tabs {
   display: flex;
   border-right: $border-hairline;
+
+  @media (max-width: $bp-md) {
+    border-right: 0;
+    border-bottom: $border-hairline;
+  }
 }
 
 .tab {
@@ -34,6 +44,11 @@
   display: flex;
   align-items: center;
   padding: 0 $space-5;
+
+  @media (max-width: $bp-md) {
+    padding: $space-3 $space-4;
+    border-bottom: $border-hairline;
+  }
 }
 
 .pre {
@@ -84,4 +99,9 @@
 
   &:hover:not(:disabled) { background: $color-gold-2; }
   &:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  @media (max-width: $bp-md) {
+    padding: $space-3 $space-5;
+    justify-content: center;
+  }
 }

@@ -1,6 +1,10 @@
 .block {
   padding: $space-8 $space-7 $space-7;
   border-bottom: $border-hairline;
+
+  @media (max-width: $bp-md) {
+    padding: $space-6 $space-5;
+  }
 }
 
 .label { @include label; margin-bottom: $space-3; }
@@ -9,6 +13,7 @@
   display: flex;
   align-items: baseline;
   gap: $space-3;
+  flex-wrap: wrap;
 }
 
 .num {
@@ -16,6 +21,10 @@
   font-size: $size-score;
   line-height: 1;
   color: $color-gold;
+
+  @media (max-width: $bp-md) {
+    font-size: 64px;
+  }
 }
 
 .of {
@@ -23,6 +32,10 @@
   font-size: 24px;
   color: $color-ink-dim;
   font-weight: $weight-light;
+
+  @media (max-width: $bp-md) {
+    font-size: 18px;
+  }
 }
 
 .gradeBox {
@@ -36,6 +49,10 @@
   line-height: 1;
   color: $color-ink;
   font-weight: $weight-medium;
+
+  @media (max-width: $bp-md) {
+    font-size: 36px;
+  }
 }
 
 .gradeLabel {
@@ -56,4 +73,9 @@
   padding-top: $space-4;
   border-top: $border-soft;
   max-width: 380px;
+
+  @media (max-width: $bp-md) {
+    font-size: 15px;
+    max-width: none;
+  }
 }
