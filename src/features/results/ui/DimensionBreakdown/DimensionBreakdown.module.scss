@@ -13,6 +13,12 @@
   border-bottom: $border-hairline;
 
   .right { text-align: right; }
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 24px 1fr 56px 60px;
+    gap: $space-2;
+    padding: $space-3 $space-5;
+  }
 }
 
 .row {
@@ -29,6 +35,12 @@
   &.high { .score { color: $color-gold; } .fill { background: $color-gold; } }
   &.mid  { .score { color: $color-signal-yellow; } .fill { background: $color-signal-yellow; } }
   &.low  { .score { color: $color-signal-red; } .fill { background: $color-signal-red; } }
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 24px 1fr 56px 60px;
+    gap: $space-2;
+    padding: $space-3 $space-5;
+  }
 }
 
 .idx {

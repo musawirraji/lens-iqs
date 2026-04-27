@@ -14,12 +14,23 @@
   position: sticky;
   top: 0;
   z-index: $z-masthead;
+
+  @media (max-width: $bp-md) {
+    padding: $space-3 $space-4;
+    flex-wrap: wrap;
+    gap: $space-2;
+  }
 }
 
 .left {
   display: flex;
   align-items: center;
   gap: $space-6;
+  min-width: 0;
+
+  @media (max-width: $bp-md) {
+    gap: $space-3;
+  }
 }
 
 .wordmark {
@@ -29,12 +40,21 @@
   letter-spacing: -0.01em;
 
   span { color: $color-gold; }
+
+  @media (max-width: $bp-md) {
+    font-size: 18px;
+  }
 }
 
 .breadcrumb {
   @include label;
   padding-left: $space-6;
   border-left: $border-hairline;
+
+  // Breadcrumb is helpful but not essential on small screens.
+  @media (max-width: $bp-md) {
+    display: none;
+  }
 }
 
 .right {
@@ -45,6 +65,11 @@
   font-size: $size-caption;
   color: $color-ink-dim;
   letter-spacing: 0.05em;
+
+  @media (max-width: $bp-md) {
+    font-size: 10px;
+    gap: $space-2;
+  }
 }
 
 .statusDot {
@@ -59,6 +84,17 @@
   display: grid;
   grid-template-columns: 1fr $layout-pane-width;
   min-height: calc(100vh - 60px);
+
+  // Tablet & below: stack the panes vertically.
+  // Scoring pane goes ON TOP — investors should see the score first.
+  @media (max-width: $bp-lg) {
+    grid-template-columns: 1fr;
+
+    // Reverse DOM order so the scoring pane (the right child in source) is
+    // shown first on narrow viewports.
+    > :first-child { order: 2; border-right: 0; }
+    > :last-child  { order: 1; border-bottom: $border-hairline; }
+  }
 }
 
 .scoringPane {
@@ -72,6 +108,11 @@
   font-size: 19px;
   line-height: 1.5;
   color: $color-ink-dim;
+
+  @media (max-width: $bp-md) {
+    padding: $space-10 $space-5;
+    font-size: 17px;
+  }
 }
 
 .error {
