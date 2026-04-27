@@ -1,0 +1,59 @@
+.block {
+  padding: $space-8 $space-7 $space-7;
+  border-bottom: $border-hairline;
+}
+
+.label { @include label; margin-bottom: $space-3; }
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: $space-3;
+}
+
+.num {
+  @include score-numeral;
+  font-size: $size-score;
+  line-height: 1;
+  color: $color-gold;
+}
+
+.of {
+  font-family: $font-mono;
+  font-size: 24px;
+  color: $color-ink-dim;
+  font-weight: $weight-light;
+}
+
+.gradeBox {
+  margin-left: auto;
+  text-align: right;
+}
+
+.grade {
+  font-family: $font-serif;
+  font-size: 48px;
+  line-height: 1;
+  color: $color-ink;
+  font-weight: $weight-medium;
+}
+
+.gradeLabel {
+  font-family: $font-mono;
+  font-size: $size-micro;
+  letter-spacing: $ls-label;
+  text-transform: uppercase;
+  color: $color-ink-faint;
+  margin-top: $space-1;
+}
+
+.verdict {
+  font-family: $font-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: $color-ink;
+  margin-top: $space-4;
+  padding-top: $space-4;
+  border-top: $border-soft;
+  max-width: 380px;
+}

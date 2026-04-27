@@ -1,0 +1,81 @@
+.pane {
+  padding: $space-12 $space-12 $space-20;
+  border-right: $border-hairline;
+  overflow-y: auto;
+}
+
+.kicker {
+  @include label;
+  color: $color-gold;
+  margin-bottom: $space-3;
+}
+
+.headline {
+  @include headline;
+  font-size: $size-h1;
+  margin-bottom: $space-4;
+  max-width: 720px;
+}
+
+.byline {
+  font-family: $font-mono;
+  font-size: $size-caption;
+  letter-spacing: 0.08em;
+  color: $color-ink-dim;
+  padding-bottom: $space-6;
+  border-bottom: $border-hairline;
+  margin-bottom: $space-8;
+}
+
+.body {
+  @include body-reading;
+  max-width: $layout-article-max;
+  color: $color-ink;
+  white-space: pre-wrap;
+}
+
+.hl-red {
+  background: $color-hl-red;
+  border-bottom: 1.5px solid $color-signal-red;
+  padding: 1px 2px;
+  cursor: help;
+}
+
+.hl-yellow {
+  background: $color-hl-yellow;
+  border-bottom: 1.5px solid $color-signal-yellow;
+  padding: 1px 2px;
+  cursor: help;
+}
+
+.hl-blue {
+  background: $color-hl-blue;
+  border-bottom: 1.5px solid $color-signal-blue;
+  padding: 1px 2px;
+  cursor: help;
+}
+
+.legend {
+  display: flex;
+  gap: $space-7;
+  margin-top: $space-12;
+  padding-top: $space-4;
+  border-top: $border-hairline;
+  font-family: $font-mono;
+  font-size: $size-micro;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-ink-dim;
+}
+
+.swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: $space-2;
+  vertical-align: middle;
+}
+
+.red    { background: $color-signal-red; }
+.yellow { background: $color-signal-yellow; }
+.blue   { background: $color-signal-blue; }

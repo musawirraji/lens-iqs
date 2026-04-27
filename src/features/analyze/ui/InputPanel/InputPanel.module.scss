@@ -1,0 +1,87 @@
+.bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-bottom: $border-hairline;
+  background: $color-navy-2;
+}
+
+.tabs {
+  display: flex;
+  border-right: $border-hairline;
+}
+
+.tab {
+  padding: $space-3 $space-5;
+  font-family: $font-mono;
+  font-size: $size-caption;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-ink-dim;
+  border-right: $border-hairline;
+  transition: color 80ms ease;
+
+  &:hover { color: $color-ink; }
+
+  &.active {
+    color: $color-gold;
+    background: $color-navy;
+    border-bottom: 2px solid $color-gold;
+    padding-bottom: calc(#{$space-3} - 2px);
+  }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  padding: 0 $space-5;
+}
+
+.pre {
+  font-family: $font-mono;
+  font-size: $size-caption;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-ink-faint;
+  margin-right: $space-3;
+}
+
+.input,
+.textarea {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: $color-ink;
+  font-family: $font-sans;
+  font-size: $size-body;
+  width: 100%;
+  flex: 1;
+
+  &::placeholder { color: $color-ink-faint; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+.textarea {
+  padding: $space-3 0;
+  resize: vertical;
+  min-height: 56px;
+  line-height: $lh-normal;
+}
+
+.run {
+  padding: 0 $space-7;
+  background: $color-gold;
+  color: $color-navy;
+  font-family: $font-mono;
+  font-size: $size-caption;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: $weight-semibold;
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  border-radius: 0;
+  transition: background 80ms ease;
+
+  &:hover:not(:disabled) { background: $color-gold-2; }
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
+}

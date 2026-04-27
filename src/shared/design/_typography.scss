@@ -1,0 +1,73 @@
+// =============================================================================
+// Lens IQS — typography tokens & mixins
+// =============================================================================
+// _typography.scss is loaded as a module by every component via the global
+// prepend in next.config.ts. The mixins below reference variables defined
+// in _tokens.scss — Sass scopes per file, so this partial must @use tokens
+// itself for those references to resolve.
+@use "tokens" as *;
+
+// ---------- Families --------------------------------------------------------
+$font-serif:  "Newsreader", Georgia, "Times New Roman", serif;
+$font-sans:   "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-mono:   "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+
+// ---------- Weights ---------------------------------------------------------
+$weight-light:    300;
+$weight-regular:  400;
+$weight-medium:   500;
+$weight-semibold: 600;
+$weight-bold:     700;
+
+// ---------- Sizes -----------------------------------------------------------
+$size-display:    64px;  // hero
+$size-h1:         38px;  // article headline
+$size-h2:         28px;  // section heads
+$size-h3:         20px;  // sub-heads
+$size-body-lg:    18px;  // article body (Newsreader)
+$size-body:       15px;  // UI body (Plex Sans)
+$size-body-sm:    13px;  // dense UI
+$size-caption:    11px;  // labels (Plex Mono)
+$size-micro:      10px;  // kicker / breadcrumb
+$size-score:      96px;  // aggregate IQS
+
+// ---------- Line heights ----------------------------------------------------
+$lh-tight:   1.05;
+$lh-snug:    1.2;
+$lh-normal:  1.55;
+$lh-reading: 1.7;  // article body — long-form rhythm
+
+// ---------- Letter-spacing --------------------------------------------------
+$ls-tight:   -0.02em;
+$ls-normal:  0;
+$ls-label:   0.18em; // ALL-CAPS micro labels
+
+// ---------- Mixins ----------------------------------------------------------
+@mixin label {
+  font-family: $font-mono;
+  font-size: $size-micro;
+  letter-spacing: $ls-label;
+  text-transform: uppercase;
+  color: $color-ink-dim;
+}
+
+@mixin headline {
+  font-family: $font-serif;
+  font-weight: $weight-medium;
+  line-height: $lh-snug;
+  letter-spacing: $ls-tight;
+}
+
+@mixin body-reading {
+  font-family: $font-serif;
+  font-size: $size-body-lg;
+  line-height: $lh-reading;
+  font-weight: $weight-regular;
+}
+
+@mixin score-numeral {
+  font-family: $font-mono;
+  font-weight: $weight-medium;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: $ls-tight;
+}

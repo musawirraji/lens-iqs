@@ -1,0 +1,63 @@
+// =============================================================================
+// Lens IQS — design tokens
+// Prepended to every SCSS module via next.config.ts `additionalData`.
+// =============================================================================
+
+// ---------- Color ------------------------------------------------------------
+$color-navy:        #0A1628;  // Primary background
+$color-navy-2:      #0E1C33;  // Surface
+$color-navy-3:      #14253F;  // Elevated surface
+$color-rule:        #1F3052;  // Hard borders
+$color-rule-soft:   #162a48;  // Inner / dashed borders
+
+$color-gold:        #D4A843;  // Single accent — scores, brand, hover
+$color-gold-2:      #E8C26A;  // Highlight / verdict emphasis
+
+$color-paper:       #F4EFE6;  // Inverse surface
+$color-ink:         #E6E8EC;  // Primary text
+$color-ink-dim:     #97A0AE;  // Secondary text
+$color-ink-faint:   #5C6679;  // Tertiary / metadata
+
+// Signal colors — used ONLY for sentence-level flagging.
+$color-signal-red:    #C8553D;  // Unsupported claim
+$color-signal-yellow: #E0B83A;  // Emotional framing
+$color-signal-blue:   #4A7AB8;  // Missing context
+$color-signal-good:   #6FA86F;  // Status / live indicator
+
+// Highlight backgrounds (low-saturation versions of signal colors)
+$color-hl-red:    rgba(200, 85, 61, 0.16);
+$color-hl-yellow: rgba(224, 184, 58, 0.14);
+$color-hl-blue:   rgba(74, 122, 184, 0.16);
+
+// ---------- Spacing (8pt scale) ---------------------------------------------
+$space-0:  0;
+$space-1:  4px;
+$space-2:  8px;
+$space-3:  12px;
+$space-4:  16px;
+$space-5:  20px;
+$space-6:  24px;
+$space-7:  28px;
+$space-8:  32px;
+$space-9:  36px;
+$space-10: 40px;
+$space-12: 48px;
+$space-16: 64px;
+$space-20: 80px;
+$space-24: 96px;
+
+// ---------- Borders / Radii -------------------------------------------------
+$border-hairline: 1px solid $color-rule;
+$border-soft:     1px solid $color-rule-soft;
+
+$radius-0: 0;
+$radius-1: 2px; // maximum allowed — institutional feel forbids more
+
+// ---------- Layout ----------------------------------------------------------
+$layout-max-width:    1440px;
+$layout-pane-width:   460px;  // right-side scoring pane
+$layout-article-max:  680px;  // article body line length
+
+// ---------- Z-index ---------------------------------------------------------
+$z-masthead: 50;
+$z-overlay:  100;

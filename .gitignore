@@ -1,0 +1,33 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Testing
+coverage
+
+# Next.js
+.next/
+out/
+build
+dist
+
+# Production
+*.log
+*.tsbuildinfo
+next-env.d.ts
+
+# Env
+.env
+.env*.local
+.env.production
+
+# Editors
+.idea
+.vscode
+*.swp
+.DS_Store
+
+# Vercel
+.vercel

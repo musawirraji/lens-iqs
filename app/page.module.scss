@@ -1,0 +1,85 @@
+.shell {
+  min-height: 100vh;
+  background: $color-navy;
+  color: $color-ink;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-3 $space-7;
+  border-bottom: 1px solid $color-gold;
+  background: $color-navy;
+  position: sticky;
+  top: 0;
+  z-index: $z-masthead;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: $space-6;
+}
+
+.wordmark {
+  font-family: $font-serif;
+  font-size: 22px;
+  font-weight: $weight-semibold;
+  letter-spacing: -0.01em;
+
+  span { color: $color-gold; }
+}
+
+.breadcrumb {
+  @include label;
+  padding-left: $space-6;
+  border-left: $border-hairline;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  font-family: $font-mono;
+  font-size: $size-caption;
+  color: $color-ink-dim;
+  letter-spacing: 0.05em;
+}
+
+.statusDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: $color-signal-good;
+  border-radius: 50%;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 1fr $layout-pane-width;
+  min-height: calc(100vh - 60px);
+}
+
+.scoringPane {
+  background: $color-navy;
+}
+
+.empty {
+  padding: $space-20 $space-12;
+  max-width: 540px;
+  font-family: $font-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: $color-ink-dim;
+}
+
+.error {
+  padding: $space-3 $space-7;
+  background: rgba(200, 85, 61, 0.12);
+  border-bottom: 1px solid $color-signal-red;
+  color: $color-signal-red;
+  font-family: $font-mono;
+  font-size: $size-caption;
+  letter-spacing: 0.08em;
+}
